@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/styles/todo.css">
+    <title>Todos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../../static/SRC/todo-item.js"></script>
+    <script src="../../static/SRC/index.js"></script>
+</head>
+<body>
+<div class = "todo_app">
+    <div class = "todo_header">
+        <h1>todos</h1>
+    </div>
+    <div class = "todo_card">
+        <div class = "todo_search search">
+            <button class = "search_button">▼</button>
+            <input type="text" class = "search_input" placeholder = "What needs to be done?">
+        </div>
+        <div class = "todo_body">
+<!--            <div class = "todo-app__item todo-item">-->
+<!--                <input class= "todo-item_checkbox" type="checkbox" value="Элемент TODO">-->
+<!--                <span class = "todo-item_text">Элемент TODO</span>-->
+<!--                <button class = "todo-item_delete">&times</button>-->
+<!--            </div>-->
+        </div>
+        <div class = "todo_menu menu">
+            <span class = "todo-menu_tasks-number">items left</span>
+            <div class = todo-item_tasks-filter >
+                <button class = "todo-item_tasks-filter_all filter_button">All</button>
+                <button class = "todo-item_tasks-filter_active filter_button">Active</button>
+                <button class = "todo-item_tasks-filter_completed filter_button">Completed</button>
+            </div>
+            <span class = "todo-item_tasks-status">Элемент TODO</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+.menu{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    background: white;
+}
+.todo-menu_tasks-number{
+    font-style: oblique;
+    margin: auto;
+    border: none;
+    text-align: left;
+    align-items: center;
+    vertical-align: middle;
+}
+.todo-item_tasks-filter{
+    font-style: oblique;
+    border: none;
+    margin: auto;
+    text-align: right;
+    align-items: center;
+    vertical-align: middle;
+
+}
+.filter_button{
+    background: transparent;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+}
+.active {
+    outline: 1px solid #e2e1e1;
+    border-radius: 3px;
+}
+.todo-item_tasks-filter_all{
+
+}
+.todo-item_tasks-filter_active{
+
+
+}
+.todo-item_tasks-filter_completed{
+
+}
+.todo-item_tasks-status{
+    font-style: oblique;
+    margin: auto;
+    border: none;
+    text-align: right;
+    align-items: center;
+    vertical-align: middle;
+}

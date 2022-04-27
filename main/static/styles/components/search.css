@@ -1,0 +1,25 @@
+.search{
+    display: flex;
+    background: white;
+}
+.search_input{
+    font-style: oblique;
+    padding: 10px 0px;
+    outline: none;
+    margin: auto;
+    text-align: left;
+    align-items: center;
+    border: none;
+    font-size: 18px;
+}
+.search_button{
+    font-size: 18px;
+    background: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px 7px;
+    margin: 10px 0px 10px 0px;
+}
+

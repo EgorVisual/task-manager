@@ -1,0 +1,50 @@
+.todo-app_item{
+    /*display: inline-block;*/
+    /*border: 1px solid #e2e1e1;*/
+    outline: 1px solid #e2e1e1;
+    height: 10%;
+    width: 100%;
+    margin: auto;
+}
+
+.todo-item{
+    /*border: 1px solid #e2e1e1;*/
+    outline: 1px solid #e2e1e1;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    font-weight: bold;
+    font-size: 20px;
+    height: 10%;
+    width: 100%;
+    margin: auto;
+}
+
+.todo-item_text{
+    font-style: normal;
+    padding: 10px 10px;
+    outline: none;
+    align-items: center;
+    width: 90%;
+    margin: 5px 5px 5px 5px;
+}
+.todo-item_delete{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    padding: 5px 5px;
+    margin: 5px 5px 5px 5px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.todo-item_checkbox{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    margin: 5px 5px 5px 5px;
+}

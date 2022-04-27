@@ -1,0 +1,63 @@
+@import "components/components.css";
+body{
+    background: #F5F5F5;
+}
+
+h1{
+    color: #EBD7D7;
+    font-family: -apple-system;
+    font-weight: 400;
+    font-size: 80px;
+    margin: 0px 0px 0px 0px;
+}
+
+h2{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 0;
+}
+
+.todo_header{
+    border: none;
+    height: 30%;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    background: transparent;
+}
+
+.todo_card{
+    /*border: 2px solid #e2e1e1;*/
+    height: 60vh;
+    width: 60%;
+    margin: auto;
+    padding: 0;
+    background: transparent;
+}
+
+.todo_search{
+    /*border: 1px solid #e2e1e1;*/
+    outline: 1px solid #e2e1e1;
+    height: 10%;
+    width: 100%;
+}
+
+.todo_body{
+    height: 79%;
+    width: 100%;
+    display: inline-block;
+    /*border: 1px solid #e2e1e1;*/
+    outline: 1px solid #e2e1e1;
+    overflow-y: scroll;
+    background: white;
+}
+
+.todo_menu{
+    height: 7%;
+    width: 100%;
+    /*border: 1px solid #e2e1e1;*/
+    outline: 1px solid #e2e1e1;
+}
+
