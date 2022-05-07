@@ -1,0 +1,42 @@
+.menu{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    background: white;
+}
+.menu__counter{
+    font-style: oblique;
+    margin: auto;
+    border: none;
+    text-align: left;
+    align-items: center;
+    vertical-align: middle;
+}
+.menu__filter{
+    font-style: oblique;
+    border: none;
+    margin: auto;
+    text-align: right;
+    align-items: center;
+    vertical-align: middle;
+
+}
+.menu-filter__button{
+    background: transparent;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+}
+.active {
+    outline: 1px solid #e2e1e1;
+    border-radius: 3px;
+}
+.menu__status{
+    font-style: oblique;
+    margin: auto;
+    border: none;
+    text-align: right;
+    align-items: center;
+    vertical-align: middle;
+}
