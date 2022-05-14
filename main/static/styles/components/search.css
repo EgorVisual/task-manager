@@ -1,0 +1,26 @@
+.search{
+    display: flex;
+    background: white;
+}
+.search__input{
+    font-style: oblique;
+    width: 600px;
+    padding: 10px 0px;
+    outline: none;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    border: none;
+    font-size: 18px;
+}
+.search__button{
+    font-size: 18px;
+    background: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px 7px;
+    margin: 10px 0px 10px 0px;
+}
+
