@@ -1,11 +1,11 @@
 from rest_framework import viewsets, permissions, status
-from .models import Task
+from .models import Task, User
 from rest_framework.response import Response
-from .serializers import TaskSerializer
+from .serializers import TaskSerializer, UserSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
-    queryset = Task.objects.all()
+    queryTasksSet = Task.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = TaskSerializer
 
@@ -30,4 +30,36 @@ class TaskViewSet(viewsets.ModelViewSet):
     def delete(self, request, pk):
         task = self.get_object(pk)
         task.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryUsersSet = User.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = UserSerializer
+
+    def list(self, request):
+        users = User.objects.all()
+        user_serializer = UserSerializer(users, many=True)
+        return Response(user_serializer.data)
+
+    def retrieve(self, request, pk):
+        user = User.objects.get(id=pk)
+        user_serializer = UserSerializer(user)
+        return Response(user_serializer.data)
+
+    def create(self, request):
+        username = request.data['username']
+        password = request.data['password']
+        fullname = request.data['fullname'] if request.data['fullname'] else 'null'
+        group = request.data['group'] if request.data['group'] else 'null'
+        role = request.data['role'] if request.data['role'] else 'null'
+
+        User.objects.create(username=username, password=password,
+                            fullname=fullname, group=group, role=role)
+        return Response(User.objects.order_by('-pk')[0].pk)
+
+    def delete(self, request, pk):
+        user = self.get_object(pk)
+        user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
