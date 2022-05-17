@@ -5,7 +5,7 @@ from .serializers import TaskSerializer, UserSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
-    queryTasksSet = Task.objects.all()
+    queryset = Task.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = TaskSerializer
 
@@ -34,7 +34,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryUsersSet = User.objects.all()
+    queryset = User.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = UserSerializer
 
