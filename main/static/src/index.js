@@ -1,4 +1,4 @@
-window.onload = function (activeUserId) {
+window.onload = function () {
     function fetchTasks(filter){
         const host = "http://localhost:8000";
         $.ajax({
@@ -70,7 +70,7 @@ window.onload = function (activeUserId) {
         cleanAllTasks();
     }
 
-    const status = 'Ready to work!'
+    const status = "User's id: "
     const addButton = document.getElementsByClassName("search__button")[0];
     const inputField = document.getElementsByClassName("search__input")[0];
     const todoBody = document.getElementsByClassName('todo__body')[0];
@@ -82,7 +82,7 @@ window.onload = function (activeUserId) {
     const statusField = document.getElementsByClassName('menu__status')[0];
 
     fetchTasks('all');
-    statusField.innerText = status;
+    statusField.innerText = status + localStorage.getItem('UserId');
 
     addButton.onclick = ()=>{
         if (inputField.value != ''){

@@ -1,14 +1,16 @@
 window.onload = function () {
-    function checkInfo(username, password, activeUserId) {
+    function checkInfo(username, password) {
         const host = "http://localhost:8000";
+        let activeUserId = 0;
         $.ajax({
             url: host + '/api/user/',
             method: 'GET',
             data: {},
             success: function (users) {
                 activeUserId = checkUserInfo(users, username, password)
-
+                localStorage.setItem('UserId', activeUserId)
                 if (activeUserId !== 0) {
+
                     window.location.href = 'http://localhost:63342/app_notion/main/templates/main/main.html';
                 }
             },
@@ -41,14 +43,14 @@ window.onload = function () {
     const username = document.getElementsByClassName("username__input")[0];
     const password = document.getElementsByClassName("password__input")[0];
     const warning = document.getElementsByClassName("message")[0];
-    let activeUserI = 0;
-    const user = new User()
+
+
 
     // http://localhost:63342/app_notion/main/templates/main/main.html   - главная страница
     // Так как мы работаем с асинхронными запросами, то мы не можем просто взять и вернуть из запроса перменныю,
     // она приходит позже, чем код успевает обрабатывать функции.
     loginButton.onclick = () => {
-        checkInfo(username.value, password.value, activeUserId);
+        checkInfo(username.value, password.value);
     }
 }
 
