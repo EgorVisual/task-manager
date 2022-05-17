@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function (activeUserId) {
     function fetchTasks(filter){
         const host = "http://localhost:8000";
         $.ajax({
@@ -86,7 +86,7 @@ window.onload = function () {
 
     addButton.onclick = ()=>{
         if (inputField.value != ''){
-            const todo = new TodoItem(inputField.value,true)
+            const todo  = new TodoItem(inputField.value,true)
             todo.createTodoItem(todoBody);
             // todoBody.append(todo.getHtmlElement());
             printCountTasks(counterField,todoItemCheckbox);
