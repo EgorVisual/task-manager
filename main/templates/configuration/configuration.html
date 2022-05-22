@@ -8,22 +8,30 @@
     <script src="../../static/src/conf.js"></script>
 </head>
 <body>
-<div class="auth__page">
-    <div class="auth__card">
-        <div class="auth__header">
-            <h1>Authorization page.</h1>
+<div class="conf__page">
+    <div class="conf__card">
+        <div class="conf__header">
+            <h1>Personal information.</h1>
         </div>
-        <div class="auth__warning warning">
-            <span class = "warning__output message">Write your username and password!</span>
+        <div class="conf__info">
+            <div class="conf__info__warning warning">
+                <span class="warning__output message">Write your username and password!</span>
+            </div>
+            <div class="conf__info__username username">
+                <input type="text" class="username__input" placeholder="Username">
+            </div>
+            <div class="conf__info__password password">
+                <input type="text" class="password__input" placeholder="Password">
+            </div>
+            <div class="conf__info__fullname fullname">
+                <input type="text" class="fullname__input" placeholder="Fullname">
+            </div>
+            <div class="conf__info__role role">
+                <input type="text" class="role__input" placeholder="Role">
+            </div>
         </div>
-        <div class="auth__username username">
-            <input type="text" class="username__input" placeholder="Username">
-        </div>
-        <div class="auth__password password">
-            <input type="text" class="password__input" placeholder="Password">
-        </div>
-        <div class="auth__button login">
-            <button class="login__button">Login</button>
+        <div class="conf__button change-info">
+            <button class="change-info__button">Apply</button>
         </div>
     </div>
 </div>

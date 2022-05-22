@@ -57,7 +57,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
         User.objects.create(username=username, password=password,
                             fullname=fullname, group=group, role=role)
-        return Response(User.objects.order_by('-pk')[0].pk)
+        return Response(User.objects.order_by('-pk')[0])
 
     def delete(self, request, pk):
         user = self.get_object(pk)
