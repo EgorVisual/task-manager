@@ -26,9 +26,9 @@ class TaskViewSet(viewsets.ModelViewSet):
     def create(self, request):
         title = request.data['title']
         description = request.data['description']
-        is_active = request.data['is_active'] == 'true' if request.data['is_active'] else 'false'
+        status_task = request.data['status_task']
         user = request.data['user'] if request.data['user'] else 'null'
-        Task.objects.create(title=title, description=description, is_active=is_active,user=User.objects.get(id=user))
+        Task.objects.create(title=title, description=description, status_task=status_task,user=User.objects.get(id=user))
         return Response("TaskSerializer.data")
 
     def delete(self, request, pk):

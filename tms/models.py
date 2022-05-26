@@ -14,7 +14,7 @@ class User(models.Model):
 class Task(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
-    is_active = models.BooleanField()
+    status_task = models.CharField(max_length=30)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
